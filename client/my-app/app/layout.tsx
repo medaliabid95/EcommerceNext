@@ -30,6 +30,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
       <body className={inter.className}>
         {!hideNavbar && <Navbar />}
         {children}

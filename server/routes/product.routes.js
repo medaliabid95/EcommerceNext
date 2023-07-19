@@ -5,7 +5,7 @@ const {getAllProducts,createProduct,updateProduct,deleteProduct,getOne} = requir
 
 
 router.get("/getAll",getAllProducts)
-router.get("/getOne/:UserId",getOne)
+router.get("/getOne/:productsId",getOne)
 
 router.post("/add/:UserId",createProduct)
 router.delete("/:id",deleteProduct)
