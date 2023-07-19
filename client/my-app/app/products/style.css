@@ -1,4 +1,109 @@
-.btnSeller{
-    border-radius: 206.71px;
-background: #6C5DD3;
+.btnSeller {
+  border-radius: 206.71px;
+  background: #6c5dd3;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+
+  /* display: block;
+    margin: 0 auto; */
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+.filtered {
+  margin-left: 2%;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 389px;
+  height: 1424px;
+  margin-bottom: 20px;
+}
+.wordfilters {
+  margin-left: 7%;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  vertical-align: baseline;
+}
+.grid-container {
+  margin-top: 15%;
+
+  display: grid;
+  gap: 26px;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  top: -8px;
+  left: 423px;
+}
+.item3 {
+  width: 284.119px;
+  height: 434.579px;
+  flex-shrink: 0;
+  border-radius: 7.304px;
+  background: var(--white-10, rgba(255, 255, 255, 0.1));
+  box-shadow: 0px 3.6519203186035156px 2.921536445617676px 0px
+    rgba(0, 0, 0, 0.25);
+}
+.rate {
+  width: 19.72px;
+  height: 17.529px;
+  flex-shrink: 0;
+}
+.img1 {
+  width: 246.139px;
+  height: 277.546px;
+  flex-shrink: 0;
+  border-radius: 7.304px;
+  background: lightgray 50% / cover no-repeat;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.btnn {
+  margin-left: 40px;
+  display: flex;
+  width: 210px;
+  height: 36.519px;
+  padding: 7.304px 14.608px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.304px;
+  flex-shrink: 0;
+  border-radius: 7.304px;
+  background: var(
+    --pp-2-purple,
+    linear-gradient(214deg, #b75cff 0%, #671ae4 100%)
+  );
+  color: #fff;
+  cursor: pointer;
+}
+.txt {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 20px;
+  margin-top: 17px;
+}
+
+.title {
+  color: var(--half-white, rgba(255, 255, 255, 0.5));
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 20px;
+}
+.star {
+  width: 389px;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
 }
