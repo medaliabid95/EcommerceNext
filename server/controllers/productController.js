@@ -17,22 +17,17 @@ const getAllProducts = (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     });
 };
+
 const getOne = async (req, res) => {
   try {
-    const { UserId } = req.params;
-    const products = await Product.findAll({
-      where: { UserId },
-      include: [User],
-    });
-
-    if (products.length > 0) {
-      res.status(200).json(products);
-    } else {
-      res.status(404).json({ error: 'No products found for the given UserId' });
+    const { productsId } = req.params
+    const product = await Product.findOne({ where: { id: productsId } })
+    if (!product) {
+      return res.status(404).json({ error: 'product not found' })
     }
+    res.status(200).json(product)
   } catch (error) {
-    console.error('Error retrieving products:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Failed to retrieve the product' })
   }
 };
 
