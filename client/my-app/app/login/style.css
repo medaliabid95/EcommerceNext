@@ -1,0 +1,257 @@
+.signInChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(113.49deg, #984d38, #181e41 63.29%);
+  width: 1440px;
+  height: 1024px;
+}
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 606px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 527px;
+  height: 699px;
+}
+.exploreTheWorld {
+  position: absolute;
+  top: 555px;
+  left: 0;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  line-height: 39px;
+  text-align: center;
+}
+.createAnAccount {
+  font-weight: 500;
+  color: #6c5dd3;
+}
+.newUserCreateContainer {
+  position: absolute;
+  top: 115px;
+  left: 641px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.emailAddress,
+.or {
+  position: absolute;
+  top: 323px;
+  left: 860px;
+  letter-spacing: 0.02em;
+}
+.emailAddress {
+  top: 0;
+  left: 1px;
+}
+.groupItem {
+  position: absolute;
+  top: 30.75px;
+  left: -0.25px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  width: 459.5px;
+  height: 0.5px;
+}
+.emailAddressParent {
+  position: absolute;
+  top: 196px;
+  left: 640px;
+  width: 459px;
+  height: 31px;
+}
+/* Add these styles for the password section */
+.PasswordParent {
+  position: absolute;
+  top: 260px;
+  left: 640px;
+  width: 459px;
+  height: 31px;
+}
+
+.password {
+  position: absolute;
+  top: 0;
+  left: 1px;
+}
+
+.groupIcon,
+.groupInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.groupInner {
+  border-radius: var(--br-152xl);
+  border: 0.5px solid var(--color-white);
+  box-sizing: border-box;
+  width: 459px;
+  height: 72px;
+}
+.groupIcon {
+  height: 100%;
+  width: 13.51%;
+  right: 86.49%;
+  bottom: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.continueWithGoogle {
+  position: absolute;
+  top: 4.5px;
+  left: 44px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.groupParent {
+  position: absolute;
+  height: 41.67%;
+  width: 48.37%;
+  top: 29.86%;
+  right: 25.71%;
+  bottom: 28.47%;
+  left: 25.93%;
+}
+.rectangleDiv,
+.rectangleGroup {
+  position: absolute;
+  top: 391px;
+  left: 640px;
+  width: 459px;
+  height: 72px;
+}
+.rectangleDiv {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-152xl);
+  background-color: #1877f2;
+  height: 73px;
+}
+.groupIcon1 {
+  position: absolute;
+  height: 41.1%;
+  width: 6.54%;
+  top: 28.77%;
+  right: 67.54%;
+  bottom: 30.13%;
+  left: 25.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.continueWithFacebook {
+  position: absolute;
+  top: 26px;
+  left: 163px;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.groupChild1,
+.rectangleContainer {
+  position: absolute;
+  top: 496px;
+  left: 640px;
+  width: 459px;
+  height: 73px;
+}
+.groupChild1 {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-152xl);
+  background-color: #1d1d1d;
+  height: 72px;
+}
+.vectorIcon {
+  position: absolute;
+  height: 41.67%;
+  width: 5.51%;
+  top: 29.17%;
+  right: 68.56%;
+  bottom: 29.17%;
+  left: 25.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.groupDiv {
+  position: absolute;
+  top: 602px;
+  left: 640px;
+  width: 459px;
+  height: 72px;
+}
+.image8Icon,
+.rectangleParent {
+  position: absolute;
+  top: 162px;
+  left: 187px;
+  width: 1133px;
+  height: 699px;
+}
+.image8Icon {
+  top: 195px;
+  left: 306px;
+  width: 143.52px;
+  height: 477px;
+  object-fit: cover;
+}
+.signIn1 {
+  position: absolute;
+  top: 184px;
+  left: 828px;
+  font-size: 30px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  text-align: center;
+}
+.continue {
+  position: relative;
+}
+.continueWrapper {
+  position: absolute;
+  top: 499px;
+  left: 1172px;
+  border-radius: 121px;
+  background: linear-gradient(214.02deg, #b75cff, #671ae4);
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--font-poppins);
+}
+.signIn {
+  position: relative;
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  background-image: url(/sign-in@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  font-family: var(--font-sf-pro-display);
+  display : inline-block;
+}
+
+.inputbox{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+}
+
+
+
