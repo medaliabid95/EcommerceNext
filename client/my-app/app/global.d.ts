@@ -19,6 +19,8 @@ declare global {
           price: number;
           stock: number;
           imageUrl: string;
+          arr : string[];
+          setArray:(arr:string[]) => void;
         }]
         state: boolean;
         file: File;
@@ -32,6 +34,7 @@ declare global {
         handleLogout: (id: number) => void;
         setProducts:(products:string[])=>void;
         id: number;
+        msg : string;
       }
       interface AccProps{
         show:boolean;
@@ -49,3 +52,4 @@ declare global {
       
       
 }
+

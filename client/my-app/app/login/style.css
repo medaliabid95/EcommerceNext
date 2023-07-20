@@ -89,6 +89,7 @@
   box-sizing: border-box;
   width: 459px;
   height: 72px;
+
 }
 .groupIcon {
   height: 100%;
@@ -122,6 +123,8 @@
   left: 640px;
   width: 459px;
   height: 72px;
+  background-color: white;
+  
 }
 .rectangleDiv {
   top: 0;
@@ -148,6 +151,7 @@
   left: 163px;
   letter-spacing: 0.02em;
   font-weight: 500;
+  color: white;
 }
 .groupChild1,
 .rectangleContainer {

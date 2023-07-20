@@ -17,7 +17,20 @@ const getAllProducts = (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     });
 };
+
 const getOne = async (req, res) => {
+  try {
+    const { productsId } = req.params
+    const product = await Product.findOne({ where: { id: productsId } })
+    if (!product) {
+      return res.status(404).json({ error: 'product not found' })
+    }
+    res.status(200).json(product)
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to retrieve the product' })
+  }
+};
+const getOneWithUser = async (req, res) => {
   try {
     const { UserId } = req.params;
     const products = await Product.findAll({
@@ -118,6 +131,7 @@ module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
-  getOne
+  getOne,
+  getOneWithUser
 };
 

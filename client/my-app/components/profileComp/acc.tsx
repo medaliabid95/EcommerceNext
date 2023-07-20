@@ -3,10 +3,9 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faCamera } from '@fortawesome/free-solid-svg-icons';
 import axios from "axios";
-import Navbar from '../navbar/Navbar'
 
 
-const Acc: React.FC<ProfileProps> = ({ handleLogout, user, setFile, change, setChange, setUpdated, updated, changeProfile, changeCover, id }) => {
+const Acc: React.FC<ProfileProps> = ({user, setFile, change, setChange, setUpdated, updated, changeProfile, changeCover, id }) => {
   const [show, setShow] = useState(false)
   const [hide, setHide] = useState(true)
   const [name, setName] = useState('')
@@ -16,11 +15,11 @@ const Acc: React.FC<ProfileProps> = ({ handleLogout, user, setFile, change, setC
 
 
   const editProfile = (id:number) => {
-    axios.patch(`http://127.0.0.1:3001/api/profile/edit/${id}`, {
+    axios.patch(`http://127.0.0.1:3000/api/profile/edit/${id}`, {
       username: name,
       bio: bio
     })
-      .then((res) => { setUpdated(!updated); console.log(updated); })
+      .then((res) => { setUpdated(!updated) })
       .catch((err) => console.log(err))
   }
 
