@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 
+
 const sequelize = new Sequelize('ecommerce', 'nour', 'piratPG12', {
+
 
   host: 'localhost',
   dialect: 'mysql',

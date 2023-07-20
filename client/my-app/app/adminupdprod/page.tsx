@@ -12,8 +12,8 @@ const UpdateCompany=()=>{
     const router = useRouter()
 console.log(search)
     const update=(id,term)=>{
-        const { company,rating,review,sales}=term
-        axios.put(`http://localhost:3000/company/${id}`,{ company,rating,review,sales   })
+        const { name,description,price,stock}=term
+        axios.put(`http://localhost:3000/product/${id}`,{ name,description,price,stock   })
         .then((res)=>{
             router.push('/admin')
         })
@@ -26,17 +26,17 @@ console.log(search)
       <form className="w3-container w3-card-4 xt" action="/action_page.php">
   <h2 className="w3-text tit">Update The Company</h2>
   <p>
-  <label className="w3-text tit"><b> Company Name :</b></label>
-  <input className="w3-input w3-border inp" name="name" type="text" onChange={(e)=>setTerm({...term,company:e.target.value})}/></p>
+  <label className="w3-text tit"><b> Product Name :</b></label>
+  <input className="w3-input w3-border inp" name="name" type="text" onChange={(e)=>setTerm({...term,name:e.target.value})}/></p>
   <p>
-  <label className="w3-text tit"><b>rating : </b></label>
-  <input  className="w3-input w3-border inp" name="description" type="text" onChange={(e)=>setTerm({...term, rating:e.target.value})}/></p>
+  <label className="w3-text tit"><b>description : </b></label>
+  <input  className="w3-input w3-border inp" name="description" type="text" onChange={(e)=>setTerm({...term, description:e.target.value})}/></p>
   <p>
-  <label className="w3-text tit"><b>review : </b></label>
-  <input  className="w3-input w3-border inp" name="price" type="text" onChange={(e)=>setTerm({...term, review:e.target.value})}/></p>
+  <label className="w3-text tit"><b>price : </b></label>
+  <input  className="w3-input w3-border inp" name="price" type="text" onChange={(e)=>setTerm({...term, price:e.target.value})}/></p>
   <p>
-  <label className="w3-text tit"><b>sales :</b></label>
-  <input  className="w3-input w3-border inp" name="stock" type="text" onChange={(e)=>setTerm({...term, sales:e.target.value})}/></p>
+  <label className="w3-text tit"><b>stock :</b></label>
+  <input  className="w3-input w3-border inp" name="stock" type="text" onChange={(e)=>setTerm({...term, stock:e.target.value})}/></p>
   <Button className="rgst" variant="contained" disableElevation onClick={()=>update(search,term)}>
         update
       </Button>

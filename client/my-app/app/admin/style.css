@@ -13,7 +13,7 @@
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align:center;
   color: white;
 }
 .img {
@@ -46,7 +46,7 @@
 .title {
   text-align: center;
   color: white;
-  margin-top: -14px;
+  margin-top: 133px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .ia{
@@ -54,4 +54,10 @@
 }
 .p{
   color: aliceblue;
+}
+.titlee {
+  text-align: center;
+  color: white;
+  margin-top: -5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
