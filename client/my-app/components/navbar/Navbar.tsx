@@ -65,7 +65,7 @@ function Navbar() {
   };
 
   const handleHome = () => {
-    router.push('/');
+    router.push('/homepage');
   };
 
   const handleProduct = () => {
@@ -109,7 +109,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="/homepage"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

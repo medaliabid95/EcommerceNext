@@ -37,31 +37,31 @@ const AddCompany=()=>{
     return(
         <div>
             <div>
-      <h1 className='prdadd'>Add Compnay </h1>
-      <form className="w3-container w3-card-4 xt" action="/action_page.php">
-  <h2 className="w3-text tit">Add The Company</h2>  
-  <p>      
-  <label className="w3-text tit"><b> Company Name :</b></label>
-  <input className="w3-input w3-border inp" name="name" type="text" onChange={(e)=>setTerm({...term, company:e.target.value})}/></p>
-  <p>      
-  <label className="w3-text tit"><b>rating : </b></label>
-  <input  className="w3-input w3-border inp" name="description" type="text" onChange={(e)=>setTerm({...term, rating:e.target.value})}/></p>
-  <p>      
-  <label className="w3-text tit"><b>review : </b></label>
-  <input  className="w3-input w3-border inp" name="price" type="text" onChange={(e)=>setTerm({...term, review:e.target.value})}/></p>
-  <p>      
-  <label className="w3-text tit"><b>sales :</b></label>
-  <input  className="w3-input w3-border inp" name="stock" type="text" onChange={(e)=>setTerm({...term, sales:e.target.value})}/></p>
-  <p>      
-  <label className="w3-text tit"><b>Picture :</b></label>
-  <input  className="w3-input w3-border" name="imageUrl" type="file" onChange={(e) => setFile(e.target.files[0])}/></p>
-  <Button className="rgst" variant="contained" disableElevation onClick={()=>add(term)}>
-        Add
-      </Button>
-      <Button className="rgst" variant="contained" disableElevation onClick={uploadImg}>
-        upload !
-      </Button>
-</form>
+                  <h1 className='prdadd'>Add Compnay </h1>
+                  <form className="w3-container w3-card-4 xt" action="/action_page.php">
+              <h2 className="w3-text tit">Add The Company</h2>  
+              <p>      
+              <label className="w3-text tit"><b> Company Name :</b></label>
+              <input className="w3-input w3-border inp" name="name" type="text" onChange={(e)=>setTerm({...term, company:e.target.value})}/></p>
+              <p>      
+              <label className="w3-text tit"><b>rating : </b></label>
+              <input  className="w3-input w3-border inp" name="description" type="text" onChange={(e)=>setTerm({...term, rating:e.target.value})}/></p>
+              <p>      
+              <label className="w3-text tit"><b>review : </b></label>
+              <input  className="w3-input w3-border inp" name="price" type="text" onChange={(e)=>setTerm({...term, review:e.target.value})}/></p>
+              <p>      
+              <label className="w3-text tit"><b>sales :</b></label>
+              <input  className="w3-input w3-border inp" name="stock" type="text" onChange={(e)=>setTerm({...term, sales:e.target.value})}/></p>
+              <p>      
+              <label className="w3-text tit"><b>Picture :</b></label>
+              <input  className="w3-input w3-border" name="imageUrl" type="file" onChange={(e) => setFile(e.target.files[0])}/></p>
+              <Button className="rgst" variant="contained" disableElevation onClick={()=>add(term)}>
+                    Add
+                  </Button>
+                  <Button className="rgst" variant="contained" disableElevation onClick={uploadImg}>
+                    upload !
+                  </Button>
+            </form>
     </div>
         </div>
     )
