@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/navbar/footer/Footer';
 import{ usePathname } from 'next/navigation';
+import AuthProvider  from '@/components/isAuth/authContext';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,15 +29,22 @@ export default function RootLayout({
   // Hide the navbar in the login and signup pages
   const hideNavbar = isLoginPage || isSignupPage;
 
-  return (
-    <html lang="en">
 
+
+  return (
+    <AuthProvider >
+    <html lang="en">
+      <head>
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+      </head>
       <body className={inter.className}>
+      
         {!hideNavbar && <Navbar />}
         {children}
         <Footer />
       </body>
     </html>
+    </AuthProvider>
   );
-}
+
+};
