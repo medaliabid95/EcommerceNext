@@ -1,0 +1,268 @@
+.signUpChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(113.49deg, #984d38, #181e41 63.29%);
+  width: 1440px;
+  height: 1024px;
+}
+.groupChild {
+  position: absolute;
+  top: 0;
+  left: 601px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 531px;
+  height: 650px;
+}
+.beginYourMeta {
+  position: absolute;
+  top: 534px;
+  left: 0;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  width: 426px;
+}
+.span {
+  color: #6c5dd3;
+}
+.signIn1 {
+  font-weight: 500;
+}
+.alreadyAMemberContainer {
+  position: absolute;
+  top: 82px;
+  left: 632px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+.emailAddress {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  letter-spacing: 0.02em;
+}
+.groupItem {
+  position: absolute;
+  top: 32.75px;
+  left: -0.25px;
+  border-top: 0.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 459.5px;
+  height: 0.5px;
+}
+.emailAddressParent,
+.vectorIcon {
+  position: absolute;
+  top: 153px;
+  left: 631px;
+  width: 459px;
+  height: 33px;
+}
+.vectorIcon {
+  height: 42.42%;
+  width: 3.7%;
+  top: 12.12%;
+  right: 0;
+  bottom: 45.45%;
+  left: 96.3%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorParent {
+  position: absolute;
+  height: 5.08%;
+  width: 40.55%;
+  top: 52.15%;
+  right: 3.71%;
+  bottom: 42.77%;
+  left: 55.74%;
+}
+.lineDiv {
+  position: absolute;
+  top: 32.75px;
+  left: -0.25px;
+  border-top: 0.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 229.5px;
+  height: 0.5px;
+}
+.fullNameParent,
+.groupChild1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 229px;
+  height: 33px;
+}
+.groupChild1 {
+  top: 32.75px;
+  left: -0.25px;
+  border-top: 0.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 204.5px;
+  height: 0.5px;
+}
+.groupParent,
+.lastNameParent {
+  position: absolute;
+  top: 0;
+  left: 254px;
+  width: 204px;
+  height: 33px;
+}
+.groupParent {
+  top: 246px;
+  left: 632px;
+  width: 458px;
+}
+.dateOfBirth {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+}
+.groupChild2,
+.groupChild3,
+.groupChild4 {
+  position: absolute;
+  top: 80.75px;
+  left: -0.25px;
+  border-top: 0.5px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 135.5px;
+  height: 0.5px;
+}
+.groupChild3,
+.groupChild4 {
+  left: 161.75px;
+}
+.groupChild4 {
+  left: 323.75px;
+}
+.day,
+.month,
+.year {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  letter-spacing: 0.02em;
+}
+.day,
+.year {
+  left: 162px;
+}
+.year {
+  left: 324px;
+}
+.vectorIcon1 {
+  position: absolute;
+  height: 8.64%;
+  width: 2.4%;
+  top: 80.25%;
+  right: 70.59%;
+  bottom: 11.11%;
+  left: 27.02%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.dateOfBirthParent {
+  position: absolute;
+  top: 432px;
+  left: 631px;
+  width: 459px;
+  height: 81px;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-200);
+}
+.createAccount {
+  position: relative;
+  font-weight: 500;
+}
+.createAccountWrapper {
+  position: absolute;
+  top: 563px;
+  left: 915px;
+  border-radius: 121px;
+  background: linear-gradient(214.02deg, #b75cff, #671ae4);
+  height: 47px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: var(--font-poppins);
+}
+.image8Icon,
+.rectangleParent {
+  position: absolute;
+  top: 187px;
+  left: 179px;
+  width: 1132px;
+  height: 650px;
+}
+.image8Icon {
+  top: 195px;
+  left: 306px;
+  width: 143.52px;
+  height: 477px;
+  object-fit: cover;
+}
+.signUp1 {
+  position: absolute;
+  top: 209px;
+  left: 811px;
+  font-size: 30px;
+  letter-spacing: 0.01em;
+  font-weight: 800;
+  text-align: center;
+}
+.signUp {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  font-family: var(--font-sf-pro-display);
+}
+
+.inputbox{
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  outline: none;
+}
+
+.roleParent{
+  position: absolute;
+  top: 500px;
+  left: 631px;
+  width: 600px;
+  height: 80px;
+  color: gray;
+}
+
+.imageParent{
+  position: absolute;
+  top: 430px;
+  left: 631px;
+  width: 800px;
+  height: 100px;
+  color: black;
+}
