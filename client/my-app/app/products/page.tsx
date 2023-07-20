@@ -24,6 +24,7 @@ const Products = () => {
   type Anchor = 'right';
   const [state, setState] = useState<Record<string, boolean>>({});
 
+  
   const toggleDrawer = (productId: string, open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
   ) => {
