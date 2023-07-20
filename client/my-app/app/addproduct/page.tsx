@@ -1,11 +1,17 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './style.css';
 import Button from '@mui/material/Button';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import { AuthContext } from '@/components/isAuth/authContext'
+import Link from 'next/link';
+
+
 
 const AddProduct = () => {
+  const  useAuth = useContext(AuthContext)
+  const { user } = useAuth
   const [products, setProducts] = useState({
     name: '',
     description: '',
@@ -23,26 +29,26 @@ const AddProduct = () => {
   const handleClick = async (e: any) => {
     e.preventDefault();
     try {
-      // await axios.post(`http://localhost:3000/product/add/${userId}`, products);
+      await axios.post(`http://localhost:3000/product/add/${user.userId}`, products);
       router.push('/products');
     } catch (err) {
       console.log(err);
     }
   };
 
-  // useEffect(() => {
-  //   const fetchAllProduct = async () => {
-  //     try {
-  //       const res = await axios.get(`http://localhost:3000/product/getOneU/${userid}`);
-  //       setData(res.data);
+  useEffect(() => {
+    const fetchAllProduct = async () => {
+      try {
+        const res = await axios.get(`http://localhost:3000/product/getOneU/${user.userId}`);
+        setData(res.data);
 
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   fetchAllProduct();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchAllProduct();
 
-  // }, [userid]);
+  }, []);
 
   const handleImageUpload = async (e: any) => {
     const file = e.target.files[0];
@@ -167,19 +173,22 @@ const AddProduct = () => {
   return (
 
             <tr key={elem.id}>
-              <th scope="row">name</th>
-              <td>{elem.name}</td>
+              <th scope="row">{elem.name}</th>
+              <td>{elem.description}</td>
               <td>
                 <img src={elem.imageUrl} alt="" style={{ height: '90px' }} />
               </td>
               <td>{elem.price}</td>
               <td>
                 <button type="button" className="btn btn-success  ">
-                  Update
+                <Link   href={{
+                        pathname: '/updateProducts',
+                        query: { id: elem.id },
+                     }}>Update</Link>
                 </button>
               </td>
               <td>
-                <button type="button" className="btn btn-danger">
+                <button onClick={() => handleDelete(elem.id)} type="button" className="btn btn-danger">
                   Delete
                 </button>
               </td>
