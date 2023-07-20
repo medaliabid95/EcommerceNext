@@ -7,9 +7,8 @@ import './style.css';
 
 const Login = () => {
  const useAuth = useContext(AuthContext)
- console.log(useAuth);
- 
-  const { handleLogin} = useAuth;
+
+   const { handleLogin} = useAuth;
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -34,7 +33,7 @@ const Login = () => {
       handleLogin(token, payload.userId, payload.role);
 
       // After successful login, navigate to the desired page.
-      router.push('/');
+      router.push('/homepage');
     } catch (error) {
       console.error('Login Error:', error);
     }

@@ -52,7 +52,6 @@ export const AuthContext = createContext<AuthContextProps>({
     sessionStorage.removeItem('userId');
     sessionStorage.removeItem('userRole');
   };
-  console.log(children);
   
   return (
     <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
