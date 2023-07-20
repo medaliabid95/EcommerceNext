@@ -90,6 +90,7 @@ const AdminDashBord = () => {
           </table>
           <Link href="/adminadd">
             <p className='p'>Add :</p>
+            <p className='p'>Add :</p>
           <img className='ia' src='https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-512.png'/>
           </Link>
           <Link href="/adminusers">
