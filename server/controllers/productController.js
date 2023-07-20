@@ -30,6 +30,24 @@ const getOne = async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve the product' })
   }
 };
+const getOneWithUser = async (req, res) => {
+  try {
+    const { UserId } = req.params;
+    const products = await Product.findAll({
+      where: { UserId },
+      include: [User],
+    });
+
+    if (products.length > 0) {
+      res.status(200).json(products);
+    } else {
+      res.status(404).json({ error: 'No products found for the given UserId' });
+    }
+  } catch (error) {
+    console.error('Error retrieving products:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
 
 
 // Create a new product
@@ -113,6 +131,7 @@ module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
-  getOne
+  getOne,
+  getOneWithUser
 };
 

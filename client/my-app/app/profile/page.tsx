@@ -20,13 +20,13 @@ const Page: React.FC<ProfileProps> = ({ userId, userRole, handleLogout }) => {
   }, [updated, state])
 
   const fetch = (id: number) => {
-    axios.get(`http://127.0.0.1:3001/api/profile/get/${id}`)
+    axios.get(`http://127.0.0.1:3000/api/profile/get/${id}`)
       .then((res) => { setUser(res.data)})
       .catch((err) => console.log(err))
   }
 
   const getProducts = (id: number) => {
-    axios.get(`http://localhost:3001/api/profile/prod/${id}`)
+    axios.get(`http://localhost:3000/api/profile/prod/${id}`)
       .then((res) => {setProducts(res.data)})
       .catch((err) => console.log(err))
   }
@@ -37,7 +37,7 @@ const Page: React.FC<ProfileProps> = ({ userId, userRole, handleLogout }) => {
     form.append("upload_preset", "blogging")
     const res = await axios.post("https://api.cloudinary.com/v1_1/dx3tuofza/upload", form)
     const url = res.data.secure_url
-    await axios.patch(`http://127.0.0.1:3001/api/profile/main/${id}`, {
+    await axios.patch(`http://127.0.0.1:3000/api/profile/main/${id}`, {
       url: url
     })
       .then((res) => { setState(!state) })
@@ -50,7 +50,7 @@ const Page: React.FC<ProfileProps> = ({ userId, userRole, handleLogout }) => {
     form.append("upload_preset", "blogging")
     const res = await axios.post("https://api.cloudinary.com/v1_1/dx3tuofza/upload", form)
     const url2 = res.data.secure_url
-    await axios.patch(`http://127.0.0.1:3001/api/profile/cover/${id}`, {
+    await axios.patch(`http://127.0.0.1:3000/api/profile/cover/${id}`, {
       url: url2
     })
       .then((res) => { setState(!state) })
