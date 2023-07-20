@@ -42,7 +42,7 @@ const isAuth = useContext(AuthContext )
     form.append("upload_preset", "blogging")
     const res = await axios.post("https://api.cloudinary.com/v1_1/dx3tuofza/upload", form)
     const url = res.data.secure_url
-    await axios.patch(`http://127.0.0.1:3001/api/profile/main/${id}`, {
+    await axios.patch(`http://127.0.0.1:3000/api/profile/main/${id}`, {
       url: url
     })
       .then((res) => { setState(!state) })
@@ -55,7 +55,7 @@ const isAuth = useContext(AuthContext )
     form.append("upload_preset", "blogging")
     const res = await axios.post("https://api.cloudinary.com/v1_1/dx3tuofza/upload", form)
     const url2 = res.data.secure_url
-    await axios.patch(`http://127.0.0.1:3001/api/profile/cover/${id}`, {
+    await axios.patch(`http://127.0.0.1:3000/api/profile/cover/${id}`, {
       url: url2
     })
       .then((res) => { setState(!state) })
