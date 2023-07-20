@@ -21,14 +21,15 @@
   }
   
   .profilee .imagee {
-    width: 75px;
-    height: 75px;
-    background: red;
+    width: 125px;
+    height: 125px;
+    /* background: red; */
     border-radius: 50%;
     margin: 0 auto;
     position: absolute;
+    
     right: 15px;
-    top: 15px;
+    top: -2px;
     transform-origin: bottom left;
     box-shadow: 0 3px 15px rgba(black, 0.1);
     transition: all 0.3s ease-in-out;
@@ -41,3 +42,10 @@
     transform: scale(1.5);
     border-radius: 10px;
   }
+  .oo {
+    width: 47px;
+  }
+  .nin {
+    max-width: 243px;
+  }
+ 

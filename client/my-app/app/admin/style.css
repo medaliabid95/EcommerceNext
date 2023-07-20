@@ -47,11 +47,14 @@
   .title {
     text-align: center;
     color: white;
-    margin-top: 150px;
+    margin-top: -14px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .ia{
     width: 70px;
+  }
+  .p{
+    color: aliceblue;
   }
 
   

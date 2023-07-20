@@ -79,7 +79,12 @@ const AdminDashBord = () => {
             </tbody>
           </table>
           <Link href="/adminadd">
+            <p className='p'>Add :</p>
           <img className='ia' src='https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-512.png'/>
+          </Link>
+          <Link href="/">
+            <p className='p'>users :</p>
+          <img className='ia' src='https://cdn-icons-png.flaticon.com/512/552/552721.png'/>
           </Link>
         </div>
         <h1 className='title'>ALL PRODUCT</h1>
