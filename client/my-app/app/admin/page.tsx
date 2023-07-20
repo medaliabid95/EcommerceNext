@@ -13,7 +13,6 @@ const AdminDashBord = () => {
         axios.get("http://localhost:3000/company")
           .then((res) => {
             setCompany(res.data)
-            console.log(res.data)
           })
           .catch((err) => console.log(err))
       }
@@ -21,7 +20,6 @@ const AdminDashBord = () => {
         axios.get("http://localhost:3000/product/getAll")
           .then((res) => {
             setProduct(res.data)
-            console.log(res.data)
           })
           .catch((err) => console.log(err))
       }
