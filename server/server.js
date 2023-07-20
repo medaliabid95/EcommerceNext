@@ -7,7 +7,7 @@ const sequelize = require("./database/db")
 
 const productRoute = require("./routes/product.routes")
 const profileRoutes=require("./routes/profile.routes")
-PORT  = 3001 ; 
+PORT  = 3000 ; 
 
 
 const app = express();

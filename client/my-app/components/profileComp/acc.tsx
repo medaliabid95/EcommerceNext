@@ -16,7 +16,7 @@ const Acc: React.FC<ProfileProps> = ({ handleLogout, user, setFile, change, setC
 
 
   const editProfile = (id:number) => {
-    axios.patch(`http://127.0.0.1:3001/api/profile/edit/${id}`, {
+    axios.patch(`http://127.0.0.1:3000/api/profile/edit/${id}`, {
       username: name,
       bio: bio
     })
