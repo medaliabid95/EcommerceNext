@@ -20,7 +20,6 @@ const Photos: React.FC<ProfileProps> = ({ products }) => {
                 ))}
             </ImageList>
         </div>
-
     );
 }
 

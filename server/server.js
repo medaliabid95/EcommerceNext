@@ -1,13 +1,10 @@
-
-
 const express = require('express');
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
 const sequelize = require("./database/db")
-
 const productRoute = require("./routes/product.routes")
-const profileRoutes=require("./routes/profile.routes")
-PORT  = 3001 ; 
+const profileRoutes = require("./routes/profile.routes")
+PORT = 3001;
 
 
 const app = express();
@@ -20,10 +17,10 @@ app.use(cookieParser());
 
 
 
-const companyRoute=require("./routes/Companies.routes")
-app.use("/company",companyRoute)
+const companyRoute = require("./routes/Companies.routes")
+app.use("/company", companyRoute)
 
-app.use("/product",productRoute)
+app.use("/product", productRoute)
 const orderRoute = require('./routes/order.routes');
 app.use('/order', orderRoute);
 
@@ -33,7 +30,7 @@ const usersRoute = require('./routes/user.routes');
 
 
 app.use('/users', usersRoute);
-app.use("/api/profile",profileRoutes)
+app.use("/api/profile", profileRoutes)
 
 
 
@@ -52,7 +49,9 @@ sequelize.authenticate()
   .catch((error) => {
     console.error('Unable to connect to the database:', error);
   });
-  const RatingRoute = require("./routes/rating.routes")
-app.use("/rating",RatingRoute)
+
+const RatingRoute = require("./routes/rating.routes")
+
+app.use("/rating", RatingRoute)
 
 
