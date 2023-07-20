@@ -20,10 +20,11 @@ interface Product {
 }
 const Products = () => {
   const [product, setProduct] = useState<Product[]>([]);
-
+  const [data, setData] = useState<number>(6000);
   type Anchor = 'right';
   const [state, setState] = useState<Record<string, boolean>>({});
 
+  
   const toggleDrawer = (productId: string, open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
   ) => {
@@ -69,6 +70,7 @@ const Products = () => {
 
   }, []);
 
+  const filteredProducts = product.filter((p) => p.price <= data);
 
 
   return (
@@ -103,10 +105,27 @@ const Products = () => {
         
         <Grid className= "star">
         </Grid>
+        <div className='dvvv'>
+
+        <h3 className='wordf'>
+Filter buy the price :
+        </h3>
+        <h4>{data} $</h4>
+        <input
+          type="range"
+          min="0"
+          max="6000"
+          step="1"
+          value={data}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setData(parseInt(e.target.value))
+          }
+        />        
+        </div>
 
       </div>
       <div className="grid-container">
-        {product.map((e : any)=>{
+        {filteredProducts.map((e : any)=>{
           return (
 
       <div className=" item3"  key={e.id}>
@@ -125,7 +144,7 @@ const Products = () => {
                     fill="#FF2525"
                   />
                 </svg>
-                <button onClick={toggleDrawer(e.id, true)}   className="btnn  ">
+                <button onClick={toggleDrawer(e.id, true)}   className="btnn">
                   {e.price} $
                 </button>
                 <Drawer
@@ -137,11 +156,18 @@ const Products = () => {
                   <List>
                     <ListItem>
                       <ListItemText primary={`Price: ${e.price} $`} />
-                      
+                      <ListItemText primary={`desc: ${e.description} $`} />
+
+
 
                     </ListItem>
+                    <img src={`${e.imageUrl}`} className='dr'/>
                   </List>
                   <Divider />
+      <h3>TOTAL :</h3>
+                  <Button className="btn" variant="contained" disableElevation>
+        Buy Now
+      </Button>
                 </Box>
               </Drawer>
                 
@@ -155,19 +181,7 @@ const Products = () => {
       </div>
       <div>
         
-      {/* {(['right'] as const).map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>hi</Button>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-            
-          </Drawer>
-        </React.Fragment>
-      ))} */}
+     
     </div>
       
     </div>
