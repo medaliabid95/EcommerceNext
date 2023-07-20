@@ -73,6 +73,11 @@ function Navbar() {
   const handleProduct = () => {
     router.push('/products');
   };
+
+  const handleMore = () =>{
+    if(user.userRole === 'admin')
+    router.push('/admin');
+  }
   // The onClick event handler for buttons and menu items
   const handleButtonClick = (page: string) => {
     switch (page) {
@@ -82,6 +87,9 @@ function Navbar() {
       case 'Product':
         handleProduct();
         break;
+        case  'More' : 
+        handleMore() ; 
+        break ; 
       default:
         handleCloseNavMenu();
         break;
