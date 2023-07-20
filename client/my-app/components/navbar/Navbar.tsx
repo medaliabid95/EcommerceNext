@@ -23,8 +23,6 @@ const settings = ['Profile', 'Logout'];
 
 function Navbar() {
   const  useAuth = useContext(AuthContext)
-  console.log(useAuth);
-
   const { user, handleLogout } = useAuth;
   const [userImgUrl, setUserImgUrl] = useState<string | null>(null);
 

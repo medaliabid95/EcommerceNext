@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import "./style.css"
 
 const Company=()=>{
@@ -9,7 +11,8 @@ const Company=()=>{
     const [term,setTerm]=useState("")
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
-    console.log(search)
+    const router = useRouter()
+    
     
     const getOne = (search) => {
         axios
@@ -17,7 +20,14 @@ const Company=()=>{
           .then((res) => setCompanyy(res.data))
           .catch((err) => console.log(err))
       }
-      
+      const delet=(id)=>{
+        axios.delete(`http://localhost:3000/company/${id}`)
+        .then((res)=>{
+            setCompanyy(null)       
+            router.push('/admin')
+        })
+        .catch((err)=>console.log(err))
+    }
 
       useEffect(() => {
         getOne(search)
@@ -33,8 +43,14 @@ const Company=()=>{
           <h2>{companyy.company}</h2>
           <p>Review:</p>
           <p>{companyy.review}</p>
-          <img className='oo' src='https://cdn-icons-png.flaticon.com/512/1345/1345874.png'/>
-          
+          <img className='oo' onClick={()=>delet(companyy.id)} src='https://cdn-icons-png.flaticon.com/512/1345/1345874.png'/>
+          <Link
+                        href={{
+                        pathname: '/adminupcomp',
+                        query: { id: companyy.id },
+                     }}>
+          <img  className='oo' src='https://cdn-icons-png.flaticon.com/512/5278/5278663.png'/>
+          </Link>
         </div>
       </div>
         </div>
