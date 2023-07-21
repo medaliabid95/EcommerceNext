@@ -3,8 +3,8 @@ import React, { useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 const page = () => {
-    // const [searchParams] = useSearchParams()
-    
+    //const searchParams = useSearchParams()
+
     // useEffect(()=>{
     //     axios
     //     .post(`http://localhost:3000/api/payment/${searchParams.get("payment_id")}`)
