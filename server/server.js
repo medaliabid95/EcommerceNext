@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
 const sequelize = require("./database/db")
+
+require("dotenv").config()
+
 const productRoute = require("./routes/product.routes")
 const profileRoutes=require("./routes/profile.routes")
 PORT  = 3000 ; 
@@ -26,7 +29,8 @@ app.use('/order', orderRoute);
 
 const usersRoute = require('./routes/user.routes');
 
-
+const paymentRouter = require("./routes/payment.routes")
+app.use("/api",paymentRouter)
 
 
 app.use('/users', usersRoute);
