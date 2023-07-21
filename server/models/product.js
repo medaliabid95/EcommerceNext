@@ -8,6 +8,10 @@ const Product = sequelize.define('product', {
   price: DataTypes.DECIMAL(10, 2),
   stock: DataTypes.INTEGER,
   imageUrl: DataTypes.STRING,
+  is_approved: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false, 
+  }
 });
 
 Product.belongsTo(User);
