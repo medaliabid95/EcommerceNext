@@ -17,7 +17,7 @@ const AdminDashBord = () => {
           .catch((err) => console.log(err))
       }
       const getAllProduct = () => {
-        axios.get("http://localhost:3000/product/getAll")
+        axios.get("http://localhost:3000/product/getAllAdmin")
           .then((res) => {
             setProduct(res.data)
           })
@@ -30,6 +30,19 @@ const AdminDashBord = () => {
               
         })
         .catch((err)=>console.log(err))
+    }
+    const approveProduct = (id) => {
+      axios
+        .put(`http://localhost:3000/product/${id}`, {
+          is_approved: true,
+        })
+        .then((res) => {
+          console.log('Product approved successfully')
+          setState(!state)
+        })
+        .catch((err) => {
+          console.error('Error approving product:', err)
+        })
     }
       useEffect(() => {
         getAllCompanies()
@@ -90,15 +103,14 @@ const AdminDashBord = () => {
           </table>
           <Link href="/adminadd">
             <p className='p'>Add :</p>
-            <p className='p'>Add :</p>
-          <img className='ia' src='https://cdn3.iconfinder.com/data/icons/eightyshades/512/14_Add-512.png'/>
+          <img className='ia' src='https://cdn4.iconfinder.com/data/icons/symbol-color-business-1/32/office_building-add-512.png'/>
           </Link>
           <Link href="/adminusers">
             <p className='p'>users :</p>
-          <img className='ia' src='https://cdn-icons-png.flaticon.com/512/552/552721.png'/>
+          <img className='ia' src='https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png'/>
           </Link>
         </div>
-        <h1 className='titlee'>ALL PRODUCT</h1>
+        <h1 className='title'>ALL PRODUCT</h1>
         <div>
         <table id="customers">
             <thead>
@@ -107,6 +119,7 @@ const AdminDashBord = () => {
                 <th className='th'>Stock</th>
                 <th className='th'>Price</th>
                 <th className='th'>update-delete</th>
+                <th className='th'>Accept</th>
               </tr>
             </thead>
             <tbody>
@@ -140,9 +153,17 @@ const AdminDashBord = () => {
                      <img  className='iv' src='https://cdn-icons-png.flaticon.com/512/5278/5278663.png'/>
                      </Link>
                      </td>
-           
-                </tr>
-              ))}   
+
+                     <td>
+            {e.is_approved ? (
+            <p className='accept'>Accepted</p>
+            ) : (
+        <img onClick={()=>approveProduct(e.id)} className='iv' src='https://cdn-icons-png.flaticon.com/512/2550/2550322.png'/>
+           )}
+    </td>
+  </tr>
+))}
+   
             </tbody>
           </table>
         </div>
