@@ -1,16 +1,18 @@
 export {}
 declare global {
+
     interface ProfileProps {
         userId: number;
         userRole: string;
         user: {
+          id:number;
           username: string;
           email: string;
           password: string
           role: string;
-          imgUrl: string
-          coverUrl: string
-          bio: string
+          imgUrl: string;
+          coverUrl: string;
+          bio: string;
           createdAt: string;
         }
         products: [{
@@ -34,7 +36,18 @@ declare global {
         handleLogout: (id: number) => void;
         setProducts:(products:string[])=>void;
         id: number;
-        msg : string;
+        messages : {
+          content:string;
+          senderId:number,
+          id:number;
+          recipientId:number
+        }
+        item:string;
+        onClick: (any) => void;
+        message : string;
+        setMessage:(msg:string) => void;
+        arr : string[];
+        sendMessage : (msg:string,sender:number,recieve:number) =>void;
       }
       interface AccProps{
         show:boolean;

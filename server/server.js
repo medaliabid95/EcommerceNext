@@ -26,8 +26,8 @@ app.use('/order', orderRoute);
 
 const usersRoute = require('./routes/user.routes');
 
-
-
+const chatRoutes = require("./routes/chat.routes")
+app.use("/chat",chatRoutes)
 
 app.use('/users', usersRoute);
 app.use("/api/profile", profileRoutes)
