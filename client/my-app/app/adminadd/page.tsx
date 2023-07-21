@@ -11,8 +11,8 @@ const AddCompany=()=>{
     const [file,setFile]=useState(null)
     const router = useRouter()
     const add=(term:any)=>{
-        const { company,rating,review,createdAt,Image,sales}=term
-        axios.post("http://localhost:3000/company", { company,rating,review,createdAt,Image,sales})
+        const { company,rating,review,createdAt,Image,sales,color}=term
+        axios.post("http://localhost:3000/company", { company,rating,review,createdAt,Image,sales,color})
         .then((res)=>{
             setCompanyy([...companyy,res.data])
             router.push('/admin')
@@ -52,6 +52,9 @@ const AddCompany=()=>{
               <p>      
               <label className="w3-text tit"><b>sales :</b></label>
               <input  className="w3-input w3-border inp" name="stock" type="text" onChange={(e)=>setTerm({...term, sales:e.target.value})}/></p>
+              <p>      
+              <label className="w3-text tit"><b>Write A Color : </b></label>
+              <input  className="w3-input w3-border inp" name="color" type="text" onChange={(e)=>setTerm({...term, color:e.target.value})}/></p>
               <p>      
               <label className="w3-text tit"><b>Picture :</b></label>
               <input  className="w3-input w3-border" name="imageUrl" type="file" onChange={(e) => setFile(e.target.files[0])}/></p>
