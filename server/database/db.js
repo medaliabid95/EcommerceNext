@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 
 
-const sequelize = new Sequelize('ecommerce', 'mohamedali', 'borjelamri2014', {
+const sequelize = new Sequelize('ecommerce', 'nour', 'piratPG12', {
 
 
   host: 'localhost',

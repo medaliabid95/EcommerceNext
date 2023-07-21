@@ -2,7 +2,7 @@
 
 const Client = () => {
     return (
-      <div>client</div>
+      <div>no profile for clients !</div>
     )
   }
   

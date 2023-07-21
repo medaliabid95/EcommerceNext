@@ -48,6 +48,10 @@ declare global {
         setMessage:(msg:string) => void;
         arr : string[];
         sendMessage : (msg:string,sender:number,recieve:number) =>void;
+        sender : number;
+        reciever : number;
+        id:number;
+        role:string;
       }
       interface AccProps{
         show:boolean;
