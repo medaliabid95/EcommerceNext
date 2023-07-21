@@ -23,7 +23,29 @@ const Products = () => {
   const [data, setData] = useState<number>(6000);
   type Anchor = 'right';
   const [state, setState] = useState<Record<string, boolean>>({});
+  //////
+const [form , setForm] = useState({})
+const onchange = (e : any) =>{
+  setForm({
+    ...form,
+    [e.target.name] : e.target.value
+  })
+}
+const onSubmit = (e : any) =>{
+  e.preventDefault(e)
+  axios
+  .post("http://localhost:3000/api/payment/",form)
+  .then((res)=>{
+    const {result} = res.data
+    window.location.href = result.link
+    
 
+  })
+  .catch(err=>console.log(err)
+  )
+  
+}
+/////
   
   const toggleDrawer = (productId: string, open: boolean) => (
     event: React.KeyboardEvent | React.MouseEvent
@@ -155,17 +177,18 @@ Filter buy the price :
                 <Box sx={{ width: 250 }} role="presentation">
                   <List>
                     <ListItem>
+                      <ListItemText primary={`name: ${e.name} `} />
                       <ListItemText primary={`Price: ${e.price} $`} />
-                      <ListItemText primary={`desc: ${e.description} $`} />
+                    <img src={`${e.imageUrl}`} className='dr'/>
 
 
 
                     </ListItem>
-                    <img src={`${e.imageUrl}`} className='dr'/>
                   </List>
                   <Divider />
-      <h3>TOTAL :</h3>
-                  <Button className="btn" variant="contained" disableElevation>
+      <h3 className='tinp'>TOTAL : <input onChange={onchange} typeof='text' name="amount" /></h3>
+      
+                  <Button onClick={onSubmit} className="btn" variant="contained" disableElevation>
         Buy Now
       </Button>
                 </Box>
