@@ -32,6 +32,8 @@ const usersRoute = require('./routes/user.routes');
 const paymentRouter = require("./routes/payment.routes")
 app.use("/api",paymentRouter)
 
+const chatRoutes = require("./routes/chat.routes")
+app.use("/chat",chatRoutes)
 
 app.use('/users', usersRoute);
 app.use("/api/profile", profileRoutes)
