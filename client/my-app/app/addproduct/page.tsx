@@ -12,6 +12,7 @@ import Link from 'next/link';
 const AddProduct = () => {
   const  useAuth = useContext(AuthContext)
   const { user } = useAuth
+  
   const [products, setProducts] = useState({
     name: '',
     description: '',
