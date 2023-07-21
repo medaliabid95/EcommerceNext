@@ -1,7 +1,10 @@
+/* Updated CSS file */
+
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 50%;
+  height: 300px;
 }
 
 #customers td,
@@ -13,9 +16,10 @@
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   color: white;
 }
+
 .img {
   max-width: 50px;
   max-height: 50px;
@@ -40,18 +44,126 @@
   width: 40px;
   margin-top: -14px;
 }
-.di{
+
+.di {
   display: flex;
 }
+
 .title {
   text-align: center;
   color: white;
-  margin-top: -14px;
+  margin-top: 133px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-style: italic;
 }
-.ia{
+
+.ia {
   width: 70px;
 }
-.p{
+
+.p {
   color: aliceblue;
+}
+
+.titlee {
+  text-align: center;
+  color: white;
+  margin-top: -5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.accept{
+  color: chartreuse;
+}
+
+.pieChartBox {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10%;
+  position: inline-block;
+  top: 50px;
+ 
+}
+
+.pieChartBox h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 20px;
+  margin-top: -100px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  
+}
+
+.option .title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.option .title .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.companiecontainer {
+  display: flex;
+  z-index: 1;
+
+}
+
+
+
+.pieChartBox {
+  position: relative; 
+  z-index: 2; 
+}
+
+#customers {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px; 
+}
+
+.titlee {
+  position: relative; 
+  z-index: 2; 
+}
+
+
+.span1{
+  
+  color: white;
+}
+
+.bi{
+  font-size: medium;
+ margin-left: 10px;
+}
+
+.producttable{
+  position: relative;
+  left: 250px;
 }

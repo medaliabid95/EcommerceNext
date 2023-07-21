@@ -7,6 +7,19 @@ const cloudinary = require("../database/cloudConfig.js")
 
 const getAllProducts = (req, res) => {
   Product.findAll({
+    where:{is_approved:true},
+    include: [User],
+  })
+    .then((products) => {
+      res.json(products);
+    })
+    .catch((error) => {
+      console.error('Error retrieving products:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    });
+};
+const getAllAdmin = (req, res) => {
+  Product.findAll({
     include: [User], 
   })
     .then((products) => {
@@ -52,7 +65,7 @@ const getOneWithUser = async (req, res) => {
 
 // Create a new product
 const createProduct = async (req, res) => {
-    const { name, description, price, stock, imageUrl } = req.body;
+    const { name, description, price, stock, imageUrl ,is_approved} = req.body;
     const { UserId } = req.params;
 
     try {
@@ -67,6 +80,7 @@ const createProduct = async (req, res) => {
         stock: stock,
         imageUrl: uploadResult.secure_url,
         UserId: UserId,
+        is_approved:is_approved
       });
   
       res.json(newProduct);
@@ -82,7 +96,7 @@ const createProduct = async (req, res) => {
 // Update a product
 const updateProduct = (req, res) => {
   const productId = req.params.id;
-  const { name, description, price, stock, imageUrl,userId } = req.body;
+  const { name, description, price, stock, imageUrl,userId,is_approved } = req.body;
 
   Product.update(
     {
@@ -91,7 +105,8 @@ const updateProduct = (req, res) => {
       price: price,
       stock: stock,
       imageUrl: imageUrl,
-      userId: userId
+      userId: userId,
+      is_approved:true
     },
     {
       where: {
@@ -128,6 +143,7 @@ const deleteProduct = (req, res) => {
 
 module.exports = {
   getAllProducts,
+  getAllAdmin,
   createProduct,
   updateProduct,
   deleteProduct,
