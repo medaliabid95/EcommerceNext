@@ -4,11 +4,10 @@ import Client from "../../components/profileComp/client"
 import Seller from '../../components/profileComp/seller'
 import axios from 'axios'
 import "./page.css"
-import { AuthContext } from '@/components/isAuth/authContext'
 
 
 
-const Page: React.FC<ProfileProps> = ({ userId, userRole, handleLogout }) => {
+const Page: React.FC<ProfileProps> = ({ handleLogout }) => {
   const [user, setUser] = useState([])
   const [state, setState] = useState(false)
   const [file, setFile] = useState("")
@@ -16,12 +15,13 @@ const Page: React.FC<ProfileProps> = ({ userId, userRole, handleLogout }) => {
   const [updated, setUpdated] = useState(false)
   const [products, setProducts] = useState([])
    
-const isAuth = useContext(AuthContext )
+
   console.log(typeof(sessionStorage.getItem('userId')));
-  
+  const id = parseInt(sessionStorage.getItem('userId'))
+  const role = sessionStorage.getItem('userRole')
   useEffect(() => {
-    fetch(isAuth.user ?  isAuth.user.userId : parseInt(sessionStorage.getItem('userId')))
-    getProducts(1)
+    fetch(id)
+    getProducts(id)
   }, [updated, state])
 
   const fetch = (id: number) => {
@@ -63,7 +63,7 @@ const isAuth = useContext(AuthContext )
   }
   return (
     <div>
-      {userRole === "seller" || userRole ===  "admin" ? <Client /> : <Seller products={products} handleLogout={handleLogout} user={user} setFile={setFile} change={change} setChange={setChange}  updated={updated}  setUpdated={setUpdated}  changeProfile={changeProfile} changeCover={changeCover} id={userId}  />}
+      {role === "seller"  ? <Client /> : <Seller products={products} handleLogout={handleLogout} user={user} setFile={setFile} change={change} setChange={setChange}  updated={updated}  setUpdated={setUpdated}  changeProfile={changeProfile} changeCover={changeCover} id={id}  />}
     </div>
   )
 }

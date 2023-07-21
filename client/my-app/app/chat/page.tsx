@@ -16,16 +16,27 @@ const Chat: React.FC<ProfileProps> = () => {
     const [messageSend, setMessageSend] = useState("")
     const [arr, setArr] = useState([])
     const [state, setState] = useState(false)
-
+    const [sender,setSender]=useState(0)
+    const [reciever,setReciever]=useState(0)
     const user = sessionStorage.getItem("userId")
-    let role = sessionStorage.getItem("userRole")
-    console.log(user);
-
+    const role = sessionStorage.getItem("userRole")
+    // let sender = parseInt(user)
+    // let reciever = 0
+    
+    
+    const roles = () => {
+        if (role === "admin") {
+            setSender(3)
+            setReciever(parseInt(user))
+        }
+        else {
+            setSender(parseInt(user))
+            setReciever(3)
+        }
+    }
 
     const sendMessage = (msg: string, send: number, recieve: number) => {
         socket.emit("send-message", { message: msg })
-        // array.push(msg)
-        // setArr(array)
         axios.post(`http://127.0.0.1:3000/chat/post/${send}/${recieve}`, {
             content: msg
         })
@@ -33,22 +44,21 @@ const Chat: React.FC<ProfileProps> = () => {
             .catch((err) => console.log(err)
             )
     }
-
+    roles()
     console.log("arr", arr);
 
     useEffect(() => {
         socket.on("receive-message", (data: any) => {
-            // arr.push(data.message)
-            // setArr(arr)
-            fetch(user, 3)
-
         });
-        fetch(user, 3)
+        
+        fetch(sender, reciever)
     }, [state])
 
     const fetch = (send: number, recieve: number) => {
         axios.get(`http://127.0.0.1:3000/chat/all/${send}/${recieve}`)
-            .then((res) => { setArr(res.data) })
+            .then((res) => {
+                setArr(res.data.filter((elem) => { return elem.senderId === sender && elem.recipientId === reciever || elem.senderId === reciever && elem.recipientId === sender })
+                ) })
             .catch((err) => console.log(err)
             )
     }
@@ -57,8 +67,8 @@ const Chat: React.FC<ProfileProps> = () => {
         <div className="chat">
             <ChatBar />
             <div className="chat__main">
-                <ChatBody arr={arr} id={user} />
-                <ChatFooter message={message} id={user} sendMessage={sendMessage} setMessage={setMessage} />
+                <ChatBody arr={arr} sender={sender} reciever={reciever} />
+                <ChatFooter message={message} sender={sender} reciever={reciever} sendMessage={sendMessage} setMessage={setMessage} />
             </div>
         </div>
     )
