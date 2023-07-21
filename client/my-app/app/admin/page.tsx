@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import axios from 'axios'
 import Link from 'next/link'
 import "./style.css"
@@ -8,11 +9,20 @@ const AdminDashBord = () => {
     const [company, setCompany] = useState([])
     const [product, setProduct] = useState([])
     const [state,setState]=useState(false)
+    
+
+    const pieChartData = company.map((item) => ({
+      name: item.company, 
+      value: item.sales,  
+      color: item.color,  
+    }));
 
     const getAllCompanies = () => {
         axios.get("http://localhost:3000/company")
           .then((res) => {
             setCompany(res.data)
+            console.log(res.data);
+            
           })
           .catch((err) => console.log(err))
       }
@@ -37,15 +47,16 @@ const AdminDashBord = () => {
       useEffect(() => {
         getAllProduct()
       }, [state])
-  
-    console.log(product);
-    
-  
+
+      
     return (
      
         <div>
-            <h1 className='title'>TOP MARKET STATISTICS</h1>
+            <h1 className='title'>TOP MARKET STATISTICS</h1> 
         <div>
+
+
+          <div   className='companiecontainer '>
           <table id="customers">
             <thead>
               <tr>
@@ -79,7 +90,7 @@ const AdminDashBord = () => {
                   </td>
                   <td className='rat'>
                   <div className='di'>
-                     {e.sales}
+                     {e.sales} <p className='bi'> B </p>
                      <img className='iv' src='https://cdn-icons-png.flaticon.com/512/4305/4305512.png'/>
                      </div>
                      </td>
@@ -88,6 +99,48 @@ const AdminDashBord = () => {
               ))}   
             </tbody>
           </table>
+
+          <div className="pieChartBox">
+              <h1>Leads by Sales</h1>
+              <div className="chart">
+                <ResponsiveContainer width="99%" height={300}>
+                  <PieChart>
+                    <Tooltip
+                      contentStyle={{ background: "white", borderRadius: "5px" }}
+                    />
+                    <Pie
+                      data ={pieChartData}
+                      innerRadius={"70%"}
+                      outerRadius={"90%"}
+                      paddingAngle={5}
+                      dataKey="value"
+                    >
+                      {pieChartData.map((item) => (
+                        <Cell key={item.name} fill={item.color} />
+                      ))}
+                    </Pie>
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+              <div className="options">
+                {pieChartData.map((item) => (
+                  <div className="option" key={item.name}>
+                    <div className="title">
+                      <div className="dot" style={{ backgroundColor: item.color }} />
+                    </div>
+                    <span className='span1'>{item.value}</span>
+                  </div>
+                ))}
+              </div>
+         </div>
+         </div>
+
+
+
+
+
+
+
           <Link href="/adminadd">
             <p className='p'>Add :</p>
             <p className='p'>Add :</p>
@@ -98,8 +151,13 @@ const AdminDashBord = () => {
           <img className='ia' src='https://cdn-icons-png.flaticon.com/512/552/552721.png'/>
           </Link>
         </div>
-        <h1 className='titlee'>ALL PRODUCT</h1>
-        <div>
+
+
+
+
+
+        <h1 className='title'>ALL PRODUCT</h1>
+        <div className='producttable'>
         <table id="customers">
             <thead>
               <tr>
@@ -146,8 +204,20 @@ const AdminDashBord = () => {
             </tbody>
           </table>
         </div>
+       
+   
+
       </div>
     )
+  
+  
+  
+  
+  
+  
+  
+  
+  
   }
   
   
