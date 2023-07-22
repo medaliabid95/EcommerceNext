@@ -59,5 +59,3 @@ sequelize.authenticate()
 const RatingRoute = require("./routes/rating.routes")
 
 app.use("/rating", RatingRoute)
-
-
