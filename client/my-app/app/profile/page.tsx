@@ -16,7 +16,7 @@ const Page: React.FC<ProfileProps> = ({ handleLogout }) => {
   const [products, setProducts] = useState([])
    
 
-  console.log(typeof(sessionStorage.getItem('userId')));
+
   const id = parseInt(sessionStorage.getItem('userId'))
   const role = sessionStorage.getItem('userRole')
   useEffect(() => {

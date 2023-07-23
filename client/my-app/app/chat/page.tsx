@@ -6,7 +6,7 @@ import axios from 'axios';
 import { AuthContext } from '@/components/isAuth/authContext'
 import ChatFooter from './chatFooter';
 import ChatBody from './chatBody';
-import ChatBar from './chatBar';
+// import ChatBar from './chatBar';
 let socket = io("http://localhost:8080", { transports: ["websocket"] })
 
 
@@ -16,24 +16,28 @@ const Chat: React.FC<ProfileProps> = () => {
     const [messageSend, setMessageSend] = useState("")
     const [arr, setArr] = useState([])
     const [state, setState] = useState(false)
-    const [sender,setSender]=useState(0)
-    const [reciever,setReciever]=useState(0)
+    // const [sender,setSender]=useState(0)
+    // const [reciever,setReciever]=useState(0)
     const user = sessionStorage.getItem("userId")
     const role = sessionStorage.getItem("userRole")
-    // let sender = parseInt(user)
-    // let reciever = 0
-    
-    
+    let sender = 0
+    let reciever = 0
+
+
     const roles = () => {
         if (role === "admin") {
-            setSender(3)
-            setReciever(parseInt(user))
+            sender = 3
+            reciever = 2
         }
         else {
-            setSender(parseInt(user))
-            setReciever(3)
+            sender = 2
+            reciever = 3
         }
     }
+    roles()
+
+
+
 
     const sendMessage = (msg: string, send: number, recieve: number) => {
         socket.emit("send-message", { message: msg })
@@ -44,13 +48,16 @@ const Chat: React.FC<ProfileProps> = () => {
             .catch((err) => console.log(err)
             )
     }
-    roles()
+
     console.log("arr", arr);
+
+    
 
     useEffect(() => {
         socket.on("receive-message", (data: any) => {
+            fetch(sender, reciever)
         });
-        
+        roles()
         fetch(sender, reciever)
     }, [state])
 
@@ -58,14 +65,15 @@ const Chat: React.FC<ProfileProps> = () => {
         axios.get(`http://127.0.0.1:3000/chat/all/${send}/${recieve}`)
             .then((res) => {
                 setArr(res.data.filter((elem) => { return elem.senderId === sender && elem.recipientId === reciever || elem.senderId === reciever && elem.recipientId === sender })
-                ) })
+                )
+            })
             .catch((err) => console.log(err)
             )
     }
 
     return (
         <div className="chat">
-            <ChatBar />
+            {/* <ChatBar /> */}
             <div className="chat__main">
                 <ChatBody arr={arr} sender={sender} reciever={reciever} />
                 <ChatFooter message={message} sender={sender} reciever={reciever} sendMessage={sendMessage} setMessage={setMessage} />

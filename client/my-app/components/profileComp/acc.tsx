@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faCamera } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/navigation'
 import axios from "axios";
 
 
@@ -22,7 +23,10 @@ const Acc: React.FC<ProfileProps> = ({user, setFile, change, setChange, setUpdat
       .then((res) => { setUpdated(!updated) })
       .catch((err) => console.log(err))
   }
-
+  const router = useRouter()
+  const navigate=()=>{
+    router.push('/chat')
+  }
 
   return (
     <div> 
@@ -78,6 +82,15 @@ const Acc: React.FC<ProfileProps> = ({user, setFile, change, setChange, setUpdat
           }
         }}>
           edit profile
+          <div className="hoverEffect">
+            <div>
+            </div>
+          </div></button>
+          <button className="buttonChat" onClick={(e) => {
+          e.preventDefault();
+          navigate()
+        }}>
+          chat
           <div className="hoverEffect">
             <div>
             </div>

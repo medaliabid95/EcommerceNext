@@ -20,10 +20,6 @@ const ChatBody: React.FC<ProfileProps> = ({ message,sender, reciever, arr, }) =>
     
         return (
             <div className='messenger'>
-                <header className="chat__mainHeader">
-                    <p>Hangout with Colleagues</p>
-                    <button className="leaveChat__btn">LEAVE CHAT</button>
-                </header>
                 {arr.map((msg) => {
                     return msg.senderId === sender ? (
                         <div className="message__container">
