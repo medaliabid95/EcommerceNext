@@ -1,0 +1,19 @@
+.tit{
+    font-family: serif;
+color:  #6c5dd3;
+}
+.rgst{
+    border-radius: 206.71px;
+    background: #6c5dd3;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+
+
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+.inp{
+    border-radius: 50px;
+    background: none;
+}

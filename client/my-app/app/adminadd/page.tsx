@@ -3,15 +3,15 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation'
-import "./style.css"
+import "./style1.css"
 
 const AddCompany=()=>{
     const [companyy,setCompanyy]=useState([])
-    const [term,setTerm]=useState("")
+    const [term,setTerm]=useState({})
     const [file,setFile]=useState(null)
     const router = useRouter()
-    const add=(term:any)=>{
-        const { company,rating,review,createdAt,Image,sales,color}=term
+    const add=(infos : any)=>{
+        const { company,rating,review,createdAt,Image,sales,color}=infos
         axios.post("http://localhost:3000/company", { company,rating,review,createdAt,Image,sales,color})
         .then((res)=>{
             setCompanyy([...companyy,res.data])

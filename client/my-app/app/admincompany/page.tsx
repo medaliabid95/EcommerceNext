@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import "./style.css"
+import "./style2.css"
 
 const Company=()=>{
     const [companyy, setCompanyy] = useState(null)

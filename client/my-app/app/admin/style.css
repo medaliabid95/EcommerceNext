@@ -20,6 +20,26 @@
   color: white;
 }
 
+#customerss {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  height: 300px;
+}
+
+#customerss td,
+#customerss th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customerss th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: white;
+}
+
 .img {
   max-width: 50px;
   max-height: 50px;
@@ -59,10 +79,12 @@
 
 .ia {
   width: 70px;
+  margin-left: 80px;
 }
 
 .p {
   color: aliceblue;
+  margin-left: 80px;
 }
 
 .titlee {
@@ -120,6 +142,7 @@
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 100px;
 }
 
 .option .title .dot {
@@ -145,6 +168,13 @@
   position: relative;
   z-index: 1;
   margin-top: 50px; 
+  /* margin-left: 100px; */
+}
+#customerss {
+  position: relative;
+  z-index: 1;
+  margin-top: 50px; 
+  margin-left: 400px;
 }
 
 .titlee {
