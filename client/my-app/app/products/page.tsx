@@ -11,6 +11,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Link from "next/link"
 import axios from "axios"
 import './style.css';
+
+
+
 interface Product {
   id: string;
   imageUrl: string;

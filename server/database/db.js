@@ -3,7 +3,6 @@ const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize('ecommerce', 'mohamedali', 'borjelamri2014', {
 
-
   host: 'localhost',
   dialect: 'mysql',
   logging: false,
