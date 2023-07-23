@@ -12,7 +12,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import { AuthContext } from '@/components/isAuth/authContext'
 
-import './style.css';
+import styles from './style.css';
 
 
 
@@ -96,7 +96,7 @@ const Products = () => {
     <div>
       {role !=="client" &&(
       <Link href="/addproduct">
-        <Button className="btnSeller" variant="contained" disableElevation>
+        <Button className= {styles.btnSeller} variant="contained" disableElevation>
           Seller
         </Button>
       </Link>

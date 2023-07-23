@@ -63,7 +63,7 @@ const Page: React.FC<ProfileProps> = ({ handleLogout }) => {
   }
   return (
     <div>
-      {role === "seller"  ? <Client /> : <Seller products={products} handleLogout={handleLogout} user={user} setFile={setFile} change={change} setChange={setChange}  updated={updated}  setUpdated={setUpdated}  changeProfile={changeProfile} changeCover={changeCover} id={id}  />}
+      {role === "client"  ? <Client /> : <Seller products={products} handleLogout={handleLogout} user={user} setFile={setFile} change={change} setChange={setChange}  updated={updated}  setUpdated={setUpdated}  changeProfile={changeProfile} changeCover={changeCover} id={id}  />}
     </div>
   )
 }
