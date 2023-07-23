@@ -1,0 +1,100 @@
+.containerr {
+    padding: 100px 0;
+  }
+
+  .profilee {
+    margin-top: -20px;
+    margin-left: 29px;
+    max-width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .profilee h2 {
+    color: black;
+  }
+
+  .profilee p {
+    color: rgba(black, 0.8);
+  }
+
+  .profilee .imagee {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+
+    right: 15px;
+    top: -2px;
+    transform-origin: bottom left;
+    box-shadow: 0 3px 15px rgba(black, 0.1);
+    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .profilee:hover .imagee {
+    transform: scale(1.5);
+    border-radius: 10px;
+  }
+  .oo {
+    width: 47px;
+  }
+  .nin {
+    max-width: 243px;
+  }
+  
+
+  /**/
+  .prdadd{
+    text-align: center;
+    border-radius: solid 5px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: serif;
+
+}
+.inp{
+    border-radius: 50px;
+    background: none;
+}
+.tbbb{
+    margin-top: 8%;
+}
+.xt{
+
+
+
+      margin-left: 20%;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 31px;
+      width: 558px;
+      height: 353px;
+      margin-top: -367px;
+      font-family: serif;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 32px;
+      margin-bottom: 408px;
+      margin-left: 365px;
+}
+.tit{
+    font-family: serif;
+color:  #6c5dd3;
+}
+.rgst{
+    border-radius: 206.71px;
+    background: #6c5dd3;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+
+
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
