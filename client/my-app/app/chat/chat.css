@@ -93,6 +93,7 @@
 .messenger{
     scroll-behavior: auto;
     width: 100%;
+    margin-left: 155px;
 }
 .message__container > * {
   margin-bottom: 10px;
@@ -101,6 +102,8 @@
   padding: 10px;
   background-color: #f9f5eb;
   height: 10vh;
+  margin-left: 155px;
+  width: 100%;
 }
 .form {
   width: 100%;

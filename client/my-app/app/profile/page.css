@@ -251,6 +251,23 @@
     box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
     left: 680px;
   }
+  .buttonChat{
+    display: inline-flex;
+
+    justify-content: center;
+    padding: 15px 30px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10rem;
+    transition: all 0.02s;
+    font-weight: bold;
+    color: rgb(37, 37, 37);
+    z-index: 0;
+    box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+    right : 680px;
+    margin-top: -60px;
+  }
   
   .button:hover {
     background: rgb(193, 228, 248);
@@ -533,7 +550,7 @@
     display: inline-block;
     top: 0;
     position: absolute;
-    margin-top: 450px;
+    margin-top: 520px;
   }
   
   .photos-title {
