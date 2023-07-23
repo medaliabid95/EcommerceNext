@@ -88,9 +88,11 @@
   height: 130px;
   background-color: #fff;
   padding: 20px;
+
 }
 .messenger{
     scroll-behavior: auto;
+    width: 100%;
 }
 .message__container > * {
   margin-bottom: 10px;
@@ -108,7 +110,7 @@
   justify-content: space-between;
 }
 .message {
-  width: 80%;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
   border: 1px solid #ddd;

@@ -16,7 +16,7 @@ const Page: React.FC<ProfileProps> = ({ handleLogout }) => {
   const [products, setProducts] = useState([])
    
 
-  console.log(typeof(sessionStorage.getItem('userId')));
+
   const id = parseInt(sessionStorage.getItem('userId'))
   const role = sessionStorage.getItem('userRole')
   useEffect(() => {
@@ -63,7 +63,7 @@ const Page: React.FC<ProfileProps> = ({ handleLogout }) => {
   }
   return (
     <div>
-      {role === "seller"  ? <Client /> : <Seller products={products} handleLogout={handleLogout} user={user} setFile={setFile} change={change} setChange={setChange}  updated={updated}  setUpdated={setUpdated}  changeProfile={changeProfile} changeCover={changeCover} id={id}  />}
+      {role === "client"  ? <Client /> : <Seller products={products} handleLogout={handleLogout} user={user} setFile={setFile} change={change} setChange={setChange}  updated={updated}  setUpdated={setUpdated}  changeProfile={changeProfile} changeCover={changeCover} id={id}  />}
     </div>
   )
 }

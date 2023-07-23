@@ -32,15 +32,9 @@ io.on("connection", (socket) => {
         io.emit("get-users", activeUsers);
     });
 
-    // send message to a specific user
+ 
     socket.on("send-message", (data) => {
         const { receiverId , message} = data;
-        // const user = activeUsers.find((user) => user.userId === receiverId);
-        // console.log("Sending from socket to :", receiverId)
-        // console.log("Data: ", data)
-        // if (user) {
-        //     io.to(user.socketId).emit("receive-message", { senderId: socket.id, message })
-        // }
         console.log("data",data.message);
         socket.broadcast.emit("receive-message", data)
         console.log(socket.id);
