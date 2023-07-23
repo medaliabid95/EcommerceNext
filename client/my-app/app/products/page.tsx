@@ -139,6 +139,12 @@ const Products = () => {
               <div>
                 <p className=" txt ">{e.name}</p>
                 <p className=" title ">{e.description}</p>
+                <Link
+                        href={{
+                        pathname: '/rate',
+                        query: { id: e.id },
+                     }}>
+
                 <svg
                   className="rate"
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,6 +156,7 @@ const Products = () => {
                     fill="#FF2525"
                   />
                 </svg>
+                     </Link>
                 <button onClick={toggleDrawer(e.id, true)} className="btnn">
                   {e.price} $
                 </button>

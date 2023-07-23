@@ -1,0 +1,579 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  .icon {
+    font-size: 4rem; 
+    margin: 50px; 
+    zoom: 2.5;
+    color:grey;
+    margin-top: 150px;
+  }
+
+  .highest {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 1197px;
+    height: 320px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--pp-2-purple, linear-gradient(214deg, #B75CFF 0%, #671AE4 100%));
+    margin-left: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .started{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--half-white, rgba(255, 255, 255, 0.50));
+  margin-left: 700px;
+  margin-top: -100px;
+  
+  }
+  
+  h6 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--half-white, rgba(255, 255, 255, 0.50));
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 4500px;
+    margin-left: 700px;
+  }
+  #wanna{
+    color: var(--half-white, rgba(255, 255, 255, 0.50));
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 700px;
+  }
+  #asked{
+    color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 180%;
+  margin-left: 80px;
+  text-align: center;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+ 
+  
+  .insta{
+    fill: rgba(0, 0, 0, 0.00);
+    width: 25px;
+  height: 25px;
+  
+  }
+  .discord{
+    width: 25px;
+  height: 25px;
+  fill: rgba(0, 0, 0, 0.00);
+  }
+  .youtube{
+    width: 25px;
+  height: 25px;
+    fill: rgba(0, 0, 0, 0.00);
+  }
+  .table{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+  background: var(--white-10, rgba(255, 255, 255, 0.10));
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1cm;
+  margin-left:200px ;
+  width: 294px;
+  height:364px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  
+   }
+  
+  
+   .table1 {
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-top: -10.5cm; 
+    margin-left:600px ;
+  }
+  .table2{
+     width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-top: -9.7cm;
+    margin-left:1000px ;
+  }
+  
+  .table3{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-top: 3cm;
+    margin-left:1000px ;
+  }
+  
+  .table4{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-top: -9.6cm; 
+    margin-left:600px ;
+  }
+  .table5{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-bottom: 1cm;
+    margin-left:200px ;
+    margin-top: -9.6cm;
+  }
+  .table6{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-bottom: 1cm;
+    margin-left:200px ;
+    margin-top:3.5cm;
+  }
+  .table7{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-top: -10.5cm; 
+    margin-left:600px ;
+  }
+  
+  .table8{
+    width: 294px;
+    height: 364px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--white-10, rgba(255, 255, 255, 0.10));
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-top: -9.5cm;
+    margin-left:1000px ;
+  }
+  
+  #like{
+    width: 27px;
+  height: 24px;
+  flex-shrink: 0;
+  stroke-width: 1.5px;
+  stroke: #FFF;
+  }
+  
+  .phone{
+    display: flex;
+  width: 500px;
+  flex-direction: column;
+  flex-shrink: 0;
+    color: #FFF;
+  font-family: SF Pro Display;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 135%;
+  letter-spacing: 1.2px;
+  margin-top: 10cm;
+  margin-left: 151px;
+  }
+  .iphone{
+    display: flex;
+  width: 490px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--half-white, rgba(255, 255, 255, 0.50));
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+  margin-left: 151px;
+  margin-top: 380px;
+  }
+  
+  .exploree{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 151px;
+  
+  
+  
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--pp-2-purple, linear-gradient(214deg, #B75CFF 0%, #671AE4 100%));
+  
+  }
+  
+  .create{
+    
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 00px;
+  
+  border-radius: 10px;
+  background: var(--white-10, rgba(255, 255, 255, 0.10));
+  margin: 0.5cm;
+  margin-top: 20px;
+  }
+  
+  #main{
+    display: flex;
+  width: 147.561px;
+  height: 28.171px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18.78px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 201.22px;
+  padding: 13.415px;
+  justify-content: center;
+  align-items: center;
+  gap: 13.415px;
+  border-radius: 206.71px;
+  background: #6C5DD3;
+  margin-top: -400px;
+  margin-left: 450px;
+  }
+  #market{
+    display: flex;
+  width: 152.927px;
+  height: 28.171px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 18.78px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 201.22px;
+  padding: 13.415px;
+  justify-content: center;
+  align-items: center;
+  gap: 13.415px;
+  border-radius: 206.71px;
+  background: #493E52;
+  margin-left: 800px;
+  margin-top: -40px;
+  }
+  #yes{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 150px;
+  }
+  #brands{
+    color: var(--half-white, rgba(255, 255, 255, 0.50));
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 150px;
+  margin-top: -10px;
+  }
+  #k{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 300px;
+  margin-top: -75px;
+  }
+  
+  #fashion{
+    color: var(--half-white, rgba(255, 255, 255, 0.50));
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 300px;
+  margin-top: -10px;
+  }
+  #y{
+    color: #FFF;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 520px;
+  margin-top: -78px;
+  }
+  #shows{
+    color: var(--half-white, rgba(255, 255, 255, 0.50));
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 520px;
+  margin-top: -10px;
+  }
+  #under{
+    margin-top: 120px;
+  }
+  
+  #box {
+    width: 187px;
+    height: 140px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: url("https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/2021-iphone12-colors.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 800px;
+    margin-top: -500px;
+  }
+  #box1{
+    width: 187px;
+  height: 108px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: url("https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-se-3rd-gen-colors.png");
+   background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+     margin-left: 950px;
+   margin-top: -140px;   
+  
+  }
+  #box2{
+    width: 187px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: url("https://support.apple.com/library/content/dam/edam/applecare/images/en_US/iphone/iphone-14-pro-max-colors.png");
+  background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 840px;
+    margin-top: 10px;   
+  }
+  #box3{
+    width: 187px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: url("https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP851/iphone13-colors-480_2x.png");
+  background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 1100px;
+    margin-top: -390px; 
+  
+  }
+  #box4{
+    width: 187px;
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: url("https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP851/iphone13-colors-480_2x.png");
+  background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 1050px;
+    margin-top: -50px; 
+  
+  }
+  #about{
+    color: #FFF;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-top: -80px;
+  }
+  #us{
+    display: flex;
+  width: 490px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--half-white, rgba(255, 255, 255, 0.50));
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+  margin-left: 500px;
+  margin-top: -20px;
+  
+  }
+  #box5 {
+    width: 458px;
+    height: 560px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: url("https://d1fmx1rbmqrxrr.cloudfront.net/cnet/i/edit/2021/12/apple-logo-big.jpg") center/contain no-repeat, lightgray;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -435px;
+  }
+  .lorm{
+    margin-top: 600px;
+  }
+  
+  #speak{
+    color: #FFF;
+  font-family: SF Pro Display;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 700px;
+  }
+  #p{
+    display: flex;
+  width: 588px;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: #95929F;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  margin-left: 700px;
+  
+  }
+  #more{
+    color: #FFF;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 700px;
+  
+  display: flex;
+  width: 161px;
+  height: 54px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  
+  border-radius: 6px;
+  background: var(--pp-2-purple, linear-gradient(214deg, #B75CFF 0%, #671AE4 100%));
+  }
+ 
+
+ 
+  
+ 
+  
+  

@@ -1,4 +1,5 @@
 const Rating = require('../models/rating');
+const User = require('../models/user.js');
 
 
 // Find all ratings
@@ -12,6 +13,24 @@ const getAllRating = async (req, res) => {
     }
   };
 
+  const getOneWithUser = async (req, res) => {
+    try {
+      const { UserId } = req.params;
+      const ratings = await Rating.findAll({
+        where: { UserId },
+        include: [User],
+      });
+  
+      if (ratings.length > 0) {
+        res.status(200).json(ratings);
+      } else {
+        res.status(404).json({ error: 'No ratings found for the given UserId' });
+      }
+    } catch (error) {
+      console.error('Error retrieving ratings:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  };
   // Create a new rating
   const AddRating = async (req, res) => {
     try {
@@ -68,4 +87,5 @@ const getAllRating = async (req, res) => {
     AddRating,
     updateRating,
     deleteRating,
+    getOneWithUser
   };
