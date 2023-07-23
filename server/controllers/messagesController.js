@@ -3,7 +3,7 @@ const Messages = require("../models/messages.js")
 
 const getMessages = async (req, res) => {
     try {
-        const messages = await Messages.findAll({ where: { senderId: req.params.sender, recipientId: req.params.recipient } })
+        const messages = await Messages.findAll()
         res.status(200).send(messages)
     } catch (error) {
         res.status(500).send(error)

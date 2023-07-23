@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 
-const ChatFooter:React.FC<ProfileProps> = ({id,sendMessage,message,setMessage}) => {
- 
+const ChatFooter:React.FC<ProfileProps> = ({sender,reciever,sendMessage,message,setMessage}) => {
+    const bottomEl = useRef(null);
+
+  const scrollToBottom = () => {
+    bottomEl?.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <div className="chat__footer">
-      <form className="form">
+      <form ref={bottomEl} className="form">
         <input
           type="text"
           placeholder="Write message"
@@ -12,7 +16,7 @@ const ChatFooter:React.FC<ProfileProps> = ({id,sendMessage,message,setMessage}) 
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button className="sendBtn" onClick={(e)=>{e.preventDefault();sendMessage(message,id,3)}}>SEND</button>
+        <button className="sendBtn"  onClick={(e)=>{e.preventDefault();sendMessage(message,sender,reciever);scrollToBottom}}>SEND</button>
       </form>
     </div>
   );

@@ -146,6 +146,14 @@ const AdminDashBord = () => {
                 ))}
               </div>
          </div>
+          <Link href="/adminadd">
+          
+          <img className='ia' src='https://cdn4.iconfinder.com/data/icons/symbol-color-business-1/32/office_building-add-512.png'/>
+          </Link>
+          <Link href="/adminusers">
+          
+          <img className='ia' src='https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png'/>
+          </Link>
          </div>
 
 
@@ -154,18 +162,10 @@ const AdminDashBord = () => {
 
 
 
-          <Link href="/adminadd">
-            <p className='p'>Add :</p>
-          <img className='ia' src='https://cdn4.iconfinder.com/data/icons/symbol-color-business-1/32/office_building-add-512.png'/>
-          </Link>
-          <Link href="/adminusers">
-            <p className='p'>users :</p>
-          <img className='ia' src='https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png'/>
-          </Link>
         </div>
         <h1 className='title'>ALL PRODUCT</h1>
         <div>
-        <table id="customers">
+        <table id="customerss">
             <thead>
               <tr>
                 <th className='th'>Product</th>
