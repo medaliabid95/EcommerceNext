@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 
-const ChatFooter: React.FC<ProfileProps> = ({ sender, reciever, sendMessage, message, setMessage }) => {
+const ChatFooter: React.FC<ProfileProps> = ({ state,setState,sender, reciever, sendMessage, message, setMessage }) => {
   const bottomEl = useRef(null);
 
   const scrollToBottom = () => {
@@ -20,7 +20,7 @@ const ChatFooter: React.FC<ProfileProps> = ({ sender, reciever, sendMessage, mes
           id='messageId'
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button className="sendBtn" onClick={(e) => { e.preventDefault(); sendMessage(message, sender, reciever); scrollToBottom();emptyMessageInput() }}>SEND</button>
+        <button className="sendBtn" onClick={(e) => { e.preventDefault(); sendMessage(message, sender, reciever); scrollToBottom();emptyMessageInput();setState(!state) }}>SEND</button>
       </form>
     </div>
   );
