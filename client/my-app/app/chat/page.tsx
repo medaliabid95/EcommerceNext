@@ -27,10 +27,10 @@ const Chat: React.FC<ProfileProps> = () => {
     const roles = () => {
         if (role === "admin") {
             sender = 3
-            reciever = 2
+            reciever = 1
         }
         else {
-            sender = 2
+            sender = 1
             reciever = 3
         }
     }
@@ -76,7 +76,7 @@ const Chat: React.FC<ProfileProps> = () => {
             {/* <ChatBar /> */}
             <div className="chat__main">
                 <ChatBody arr={arr} sender={sender} reciever={reciever} />
-                <ChatFooter message={message} sender={sender} reciever={reciever} sendMessage={sendMessage} setMessage={setMessage} />
+                <ChatFooter message={message} sender={sender} reciever={reciever} sendMessage={sendMessage} state={state}  setState={setState} setMessage={setMessage} />
             </div>
         </div>
     )
