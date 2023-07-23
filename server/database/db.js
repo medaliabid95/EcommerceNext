@@ -1,8 +1,7 @@
 const Sequelize = require('sequelize');
 
 
-
-const sequelize = new Sequelize('ecommerce', 'root', 'root', {
+const sequelize = new Sequelize('ecommerce', 'ahmed', 'Root123!', {
 
 
 

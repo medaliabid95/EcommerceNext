@@ -24,6 +24,7 @@ declare global {
           arr : string[];
           setArray:(arr:string[]) => void;
         }]
+        
         state: boolean;
         file: File;
         setFile: (file: File) => void;

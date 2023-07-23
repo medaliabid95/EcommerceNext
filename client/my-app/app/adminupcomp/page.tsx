@@ -4,9 +4,9 @@ import axios from 'axios'
 import Button from '@mui/material/Button';
 import { useRouter } from 'next/navigation'
 import { useSearchParams } from 'next/navigation'
-import "./style.css"
+import "./style3.css"
 const UpdateCompany=()=>{
-    const [term,setTerm]=useState("")
+    const [term,setTerm]=useState({})
     const searchParams = useSearchParams()
     const search = searchParams.get('id')
     const router = useRouter()
